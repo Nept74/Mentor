@@ -1,13 +1,22 @@
-<template>
-    <div>
+<script setup>
 
+import MyTasks from './MyTasks.vue';
+import PageToolbar from './PageToolbar.vue';
+
+</script>
+
+<template>
+    <div class="mainMenu">
+      <MyTasks></MyTasks>
+      <PageToolbar></PageToolbar>
     </div>
   </template>
   
   <style scoped>
-  div {
+  .mainMenu {
+    float: right;
     background-color:white;
-    width: 100%;
+    width: calc(100% - 240px);
     height: calc(100% - 48px);
   }
 

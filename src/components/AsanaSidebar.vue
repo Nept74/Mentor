@@ -6,6 +6,7 @@
   
   <style scoped>
   div {
+    position: relative;
     float: left;
     background-color: #424244;
     width: 240px;
