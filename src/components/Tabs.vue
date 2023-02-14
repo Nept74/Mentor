@@ -1,24 +1,15 @@
 <script setup>
 const props = defineProps({
-    tab1: String,
-    tab2: String,
-    tab3: String,
-    tab4: String
+    tabs: Array
 })
 </script>
 <template>
-        <div class="tab selected">
-            {{ tab1 }}
-        </div>
-        <div class="tab">
-            {{ tab2 }}
-        </div>
-        <div class="tab">
-            {{ tab3 }}
-        </div>
-        <div class="tab">
-            {{ tab4 }}
-        </div>
+    <div class="tab" 
+    :class="{ selected: tab.isActive }" 
+    v-for="tab in tabs"> 
+        
+        {{ tab.title }}
+    </div>
 </template>
 
 <style scoped>
@@ -34,4 +25,5 @@ const props = defineProps({
     color: black;
     border-bottom: 2px black solid;
 }
+
 </style>

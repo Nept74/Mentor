@@ -1,12 +1,15 @@
 <script setup>
 const props = defineProps({
-    button: String
+    text: {
+        Type: String,
+        default: 'meow'
+    }
 })
 </script>
 <template>
     <div class='my-auto flex flex-row cursor-pointer'>
         <div class="button rounded-l-md bg-blue-600 hover:bg-blue-700">
-            {{ button }}
+            {{ text }}
         </div>
         <div class="small-button rounded-r-lg bg-blue-600 hover:bg-blue-700">
             v
@@ -23,6 +26,9 @@ const props = defineProps({
     width: 80px;
     margin-right: 1px;
     color: white;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 3px;
 }
 .small-button {
     height: 26px;

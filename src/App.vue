@@ -1,13 +1,9 @@
 <script setup>
-import AsanaHeader from './components/AsanaHeader.vue'
-import AsanaSidebar from './components/AsanaSidebar.vue'
-import AsanaMain from './components/AsanaMain.vue';
+import MyTasks from './components/MyTasks.vue';
 </script>
 
 <template>
-  <AsanaHeader></AsanaHeader>
-  <AsanaSidebar></AsanaSidebar>
-  <AsanaMain></AsanaMain>
+  <MyTasks/>
 </template>
 
 <style scoped>

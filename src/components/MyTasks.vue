@@ -2,7 +2,16 @@
 import Header from './Header.vue'
 import Avatar from './Avatar.vue'
 import Title from './Title.vue'
-import Tabs from './Tabs.vue';
+import Tabs from './Tabs.vue'
+import PageToolbar from './PageToolbar.vue'
+import Button from './Button.vue'
+import TaskList from './TaskList.vue'
+
+let tabs = [
+  {title: 'List', isActive: true},
+  {title: 'Board', isActive: false},
+  {title: 'Calendar', isActive: false}
+]
 </script>
 <template>
   <div class="topbar">
@@ -14,10 +23,14 @@ import Tabs from './Tabs.vue';
         <Title title="My Tasks"></Title>
       </template>
       <template #tabs>
-        <Tabs tab1="List" tab2="Board" tab3="Calendar" tab4="Files"></Tabs>
+        <Tabs :tabs="tabs"></Tabs>
       </template>
     </Header>
   </div>
+  <PageToolbar>
+      <Button></Button>
+  </PageToolbar>
+  <TaskList/>
 </template>
 
 <style scoped>
@@ -30,8 +43,9 @@ import Tabs from './Tabs.vue';
 .header {
   padding: 0 24px;
 }
+
 .title {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 </style>

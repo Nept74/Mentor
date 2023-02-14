@@ -18,6 +18,7 @@
 .avatarbox {
     margin: auto 0;
 }
+
 .column {
     display: flex;
     flex-direction: column;

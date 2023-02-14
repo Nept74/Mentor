@@ -3,8 +3,7 @@ import Button from './Button.vue'
 </script>
 <template>
   <div class="toolbar flex">
-    <Button #button="meow"></Button>
-
+    <Button text='Add task'></Button>
   </div>
 </template>
 
